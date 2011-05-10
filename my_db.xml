@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scv_xml_trace version ="1.0">
+<stream id="1" name="stream_1" kind="transactor"/>
+<stream id="2" name="stream_2"/>
+<generator id="3" name="gen_1A" stream_id="1"/>
+<generator id="4" name="gen_1B" stream_id="1">
+<begin_attributes>
+<a id="0" name="begin_name" type="STRING"/>
+</begin_attributes>
+<end_attributes>
+<a id="1" name="end_name" type="STRING"/>
+</end_attributes>
+</generator>
+<generator id="5" name="gen_1C" stream_id="1">
+<begin_attributes>
+<a id="0" name="anonymous_begin" type="STRING"/>
+</begin_attributes>
+<end_attributes>
+<a id="1" name="anonymous_end" type="STRING"/>
+</end_attributes>
+</generator>
+<begin id="1" g="3" t="10 ns"/>
+<a tx="1" name="n" type="STRING" id="1">v</a>
+<end id="1" g="3" t="20 ns"/>
+<begin id="2" g="3" t="40 ns"/>
+<end id="2" g="3" t="50 ns"/>
+<relation id="1" name="predecessor" t1="1" t2="2"/>
+<relation id="2" name="sucessor" t1="2" t2="1"/>
+<del id="2"/>
+<del id="1"/>
+<del_generator id="1"/>
+<del_generator id="1"/>
+<del_generator id="1"/>
+<del_stream id="2"/>
+<del_stream id="1"/>
+</scv_xml_trace>
